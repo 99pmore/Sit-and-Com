@@ -86,16 +86,37 @@ header {
             }
         }
     }
-
-    .register{
+    .sesion{
         display: flex;
-        align-items: center;
-        button{
-            background: none;
-            border: none;
-            padding: 5px;
-            color: $secondary;
-            border-bottom: $accent 1px solid;
+        gap: 10px;
+
+        .register{
+            display: flex;
+            align-items: center;
+
+            button{
+                background: none;
+                border: none;
+                padding: 5px;
+                color: $secondary;
+                border-bottom: $accent 1px solid;
+                cursor: pointer;
+            }
+        }
+        .login{
+            display: flex;
+            align-items: center;
+
+            button{
+                background-color: $accent;
+                color: $primary;
+                padding: 8px;
+                cursor: pointer;
+                border: none;
+                border-radius: 37px;
+                box-shadow:  2px 2px 2px #a4c6ab,
+                            -2px -3px 2px #e8fff1;
+            }
         }
     }
     
