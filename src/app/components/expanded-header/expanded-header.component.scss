@@ -7,7 +7,14 @@ header {
     display: flex;
     justify-content: space-between;
 
+    .logo img{
+        width: 100px;
+        border-radius: 25px;
+    }
+
     .title{
+        display: flex;
+        align-items: center;
         font-family: 'Chokana';
         color: $secondary;
         font-size: 50px;
