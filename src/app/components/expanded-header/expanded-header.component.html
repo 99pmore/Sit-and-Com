@@ -5,7 +5,24 @@
     <div class="title">Sit&Com</div>
     <nav>
         <a routerLink="home" *ngIf="component!=='home'">Inicio</a>
-        <a routerLink="shows">Series</a>
+        <div class="series">
+            <a routerLink="shows">Series</a>
+            <div class="generos">
+                <li>Acción</li>
+                <li>Anime</li>
+                <li>Ciencia ficción y fantásticas</li>
+                <li>Ciencias y naturaleza</li>
+                <li>Comedia</li>
+                <li>Docuseries</li>
+                <li>Drama</li>
+                <li>Infantil</li>
+                <li>Policiacas</li>
+                <li>Realities</li>
+                <li>Románticas</li>
+                <li>Terror</li>
+                <li>Thrillers</li>
+            </div>
+        </div>        
         <a routerLink="movies">Películas</a>
         <a routerLink="myroom">Mi sala</a>
     </nav>
