@@ -10,6 +10,11 @@ $primary: #001c37;
 $secondary: #d9d9d9;
 $accent: #c6eece;
 
+@font-face {
+    font-family: 'Chokana';
+    src: url('./assets/fonts//chokana/Chokana.otf');
+  }
+
 body {
     background: linear-gradient(45deg, #002a52 0%, #001c37 50%, #001325 100%);
 }

@@ -2,10 +2,16 @@
 
 header {
     background: rgba(0, 0, 0, 0.15);
-    padding: 20px;
+    padding: 10px 20px;
 
     display: flex;
     justify-content: space-between;
+
+    .title{
+        font-family: 'Chokana';
+        color: $secondary;
+        font-size: 50px;
+    }
 
     nav {
         display: flex;
@@ -21,12 +27,13 @@ header {
     .search {
         position: relative;
         --size-button: 40px;
+        display: flex;
+        align-items: center;
 
         .icon {
             position: absolute;
             width: var(--size-button);
             height: var(--size-button);
-            top: 0;
             left: 0;
             padding: 8px;
             pointer-events: none;
