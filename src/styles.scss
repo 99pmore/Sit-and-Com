@@ -16,10 +16,30 @@ $accent: #c6eece;
 }
 
 @font-face {
-    font-family: 'Monsterrat';
-    src: url('./assets/fonts/Montserrat/Montserrat.ttf');
+    font-family: 'Fonarto';
+    src: url('./assets/fonts/Fonarto/Fonarto.ttf');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
+
 body {
-    background: linear-gradient(45deg, #002a52 0%, #001c37 50%, #001325 100%);
+    // background: linear-gradient(45deg, #002a52 0%, #001c37 50%, #001325 100%);
+    background: linear-gradient(45deg, #001c37 0%, #002a52 50%, #001c37 100%);
+    background-attachment: fixed;
+
+    &::-webkit-scrollbar {
+        background: $primary;
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $accent;
+        border: 1px solid $accent;
+        border-radius: 50px;
+        box-shadow: inset 2px 2px 6px #5b6e5f60, inset -2px -2px 6px #cffad8;
+
+        &:hover {
+            background: $accent;
+        }
+    }
 }

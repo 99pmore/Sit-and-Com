@@ -1,59 +1,79 @@
 @import '../../../styles.scss';
 
 header {
-    background: rgba(0, 0, 0, 0.15);
-    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    // background: rgba(0, 0, 0, 0.05);
+    background: linear-gradient(rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.0) 100%);
+    padding:  20px 20px 40px;
 
     display: flex;
     justify-content: space-between;
 
-    .logo img{
-        width: 100px;
-        border-radius: 25px;
-    }
-
-    .title{
+    .title {
         display: flex;
-        font-family: 'Chokana';
-        color: $secondary;
-        font-size: 50px;
+        gap: 20px;
+
+        .logo {
+            width: 80px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .name {
+            font-family: 'Fonarto';
+            font-size: 50px;
+            color: $secondary;
+    
+            display: flex;
+        }
     }
 
     nav {
+        padding-top: 10px;
+
         display: flex;
         gap: 40px;
-        font-family: 'Monsterrat';
-        padding-top: 20px;
 
         a {
+            font-weight: bold;
             text-decoration: none;
             color: white;
-            font-weight: bold;
         }
 
-        .generos{
-            margin-top: 5px;
-            li{
-            color: $secondary;
-            font-size: 15px;
+        .series, .movies {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+    
+            .genres {
+                list-style: none;
+    
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+    
+                li {
+                    font-size: 15px;
+                    color: $secondary;
+                }
+            }
         }
-        }
-
-        
     }
     
     .search {
         position: relative;
-        --size-button: 40px;
         display: flex;
 
         .icon {
-            position: absolute;
-            width: var(--size-button);
-            height: var(--size-button);
-            left: 0;
-            padding: 8px;
             pointer-events: none;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+
+            position: absolute;
+            left: 0;
 
             svg {
                 color: $primary;
@@ -62,26 +82,31 @@ header {
             }
         }
     }
-
+    
     .input {
-        padding-left: var(--size-button);
-        height: var(--size-button);
-        font-size: 15px;
-        border: none;
-        color: $secondary;
-        outline: none;
-        width: var(--size-button);
-        transition: all ease 0.3s;
-        background-color: $accent;
-        box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px #5f5e5e, inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
-        border-radius: 50px;
         cursor: pointer;
-
+        font-size: 15px;
+        background-color: $accent;
+        color: $primary;
+        outline: none;
+        border: 2px solid $accent;
+        border-radius: 50px;
+        box-shadow: /*1px 1px 8px #5b6e5f, -1px -1px 8px #cffad8,*/ inset 8px 8px 12px #5b6e5f60, inset -8px -8px 12px #cffad8;
+        
+        padding-left: 40px;
+        height: 40px;
+        width: 40px;
+        
+        transition: all ease 0.3s;
+        
         &:focus {
-            background-color: white;
-            width: 200px;
             cursor: text;
-            box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+            background-color: $accent;
+            border: 2px solid $accent;
+            box-shadow: /*1px 1px 8px #5b6e5f, -1px -1px 8px #cffad8,*/ inset 8px 8px 12px #5b6e5f60, inset -8px -8px 12px #cffad8;
+
+            width: 200px;
+
             + {
                 .icon {
                     pointer-events: all;
@@ -89,11 +114,11 @@ header {
                 }
             }
         }
-
+        
         &:not(:invalid) {
-            width: 200px;
             cursor: text;
-            box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+            box-shadow: /*1px 1px 8px #5b6e5f, -1px -1px 8px #cffad8,*/ inset 8px 8px 12px #5b6e5f60, inset -8px -8px 12px #cffad8;
+            width: 200px;
 
             + {
                 .icon {
@@ -103,35 +128,41 @@ header {
             }
         }
     }
-    .sesion{
+    .session {
         display: flex;
         align-items: flex-start;
-        gap: 10px;
+        gap: 20px;
 
-        .register{
+        .register {
             display: flex;
 
-            button{
-                background: none;
-                border: none;
-                padding: 5px;
-                color: $secondary;
-                border-bottom: $accent 1px solid;
+            button {
+                font-family: 'Montserrat', sans-serif;
                 cursor: pointer;
+                background: none;
+                color: $secondary;
+                border: none;
+                border-bottom: $accent 1px solid;
+
+                padding: 0 15px;
+                height: 40px;
             }
         }
-        .login{
+
+        .login {
             display: flex;
 
-            button{
+            button {
+                font-family: 'Montserrat', sans-serif;
+                cursor: pointer;
                 background-color: $accent;
                 color: $primary;
-                padding: 8px;
-                cursor: pointer;
-                border: none;
-                border-radius: 37px;
-                box-shadow:  2px 2px 2px #a4c6ab,
-                            -2px -3px 2px #e8fff1;
+                border: 2px solid $accent;
+                border-radius: 50px;
+                box-shadow: /*1px 1px 8px #5b6e5f, -1px -1px 8px #cffad8, */inset 8px 8px 12px #5b6e5f60, inset -8px -8px 12px #cffad8;
+
+                padding: 0 15px;
+                height: 40px;
             }
         }
     }

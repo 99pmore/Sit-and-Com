@@ -1,13 +1,15 @@
 <header>
-    <div class="logo">
-        <img src="../../../assets/sitcom.png" alt="sitandcom logo">
+    <div class="title">
+        <div class="logo">
+            <img src="../../../assets/sitcom.png" alt="sitandcom logo">
+        </div>
+        <h1 class="name">Sit&Com</h1>
     </div>
-    <div class="title">Sit&Com</div>
     <nav>
         <a routerLink="home" *ngIf="component!=='home'">Inicio</a>
         <div class="series">
             <a routerLink="shows">Series</a>
-            <div class="generos">
+            <ul class="genres">
                 <li>Acción</li>
                 <li>Anime</li>
                 <li>Ciencia ficción y fantásticas</li>
@@ -21,11 +23,11 @@
                 <li>Románticas</li>
                 <li>Terror</li>
                 <li>Thrillers</li>
-            </div>
+            </ul>
         </div>
         <div class="movies">
             <a routerLink="movies">Películas</a>
-            <div class="generos">
+            <ul class="genres">
                 <li>Accion</li>
                 <li>Anime</li>
                 <li>Ciencia ficción</li>
@@ -41,7 +43,7 @@
                 <li>Románticas</li>
                 <li>Terror</li>
                 <li>Thrillers</li>
-            </div>
+            </ul>
         </div>        
         
         <a routerLink="myroom">Mi sala</a>
@@ -56,7 +58,7 @@
             </svg>
         </div>
     </div>
-    <div class="sesion">
+    <div class="session">
         <div class="register">
             <button>Regístrate</button>
         </div>
