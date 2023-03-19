@@ -2,7 +2,7 @@
 
 header {
     background: rgba(0, 0, 0, 0.15);
-    padding: 10px 20px;
+    padding: 20px;
 
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,6 @@ header {
 
     .title{
         display: flex;
-        align-items: center;
         font-family: 'Chokana';
         color: $secondary;
         font-size: 50px;
@@ -22,8 +21,9 @@ header {
 
     nav {
         display: flex;
-        align-items: center;
         gap: 40px;
+        font-family: 'Monsterrat';
+        padding-top: 20px;
 
         a {
             text-decoration: none;
@@ -46,7 +46,6 @@ header {
         position: relative;
         --size-button: 40px;
         display: flex;
-        align-items: center;
 
         .icon {
             position: absolute;
@@ -106,11 +105,11 @@ header {
     }
     .sesion{
         display: flex;
+        align-items: flex-start;
         gap: 10px;
 
         .register{
             display: flex;
-            align-items: center;
 
             button{
                 background: none;
@@ -123,7 +122,6 @@ header {
         }
         .login{
             display: flex;
-            align-items: center;
 
             button{
                 background-color: $accent;

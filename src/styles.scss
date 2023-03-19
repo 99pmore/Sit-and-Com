@@ -13,7 +13,12 @@ $accent: #c6eece;
 @font-face {
     font-family: 'Chokana';
     src: url('./assets/fonts//chokana/Chokana.otf');
-  }
+}
+
+@font-face {
+    font-family: 'Monsterrat';
+    src: url('./assets/fonts/Montserrat/Montserrat.ttf');
+}
 
 body {
     background: linear-gradient(45deg, #002a52 0%, #001c37 50%, #001325 100%);
